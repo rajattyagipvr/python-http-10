@@ -1,0 +1,130 @@
+
+Showing logs for build [32mrajattyagipvr-python-http-10-ma-w572v-11[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-hxtq9[0m
+{"level":"warn","ts":1597423091.1712003,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1597423091.1715176,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mrajattyagipvr-python-http-10-ma-w572v-11[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-tg9tr[0m
+{"level":"warn","ts":1597423092.1840484,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1597423092.1852977,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mrajattyagipvr-python-http-10-ma-w572v-11[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mrajattyagipvr-python-http-10-ma-w572v-11[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-rajattyagipvr-python-http-10-ma-w572v-mxz25[0m
+{"level":"warn","ts":1597423104.386576,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1597423107.058783,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*************/python-http-10.git @ v0.0.11 in path /workspace/source"}
+
+Showing logs for build [32mrajattyagipvr-python-http-10-ma-w572v-11[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mrajattyagipvr-python-http-10-ma-w572v-11[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Cloning the Jenkins X versions repo https://github.com/*************/jenkins-x-versions.git with ref refs/heads/master to /home/.**/jenkins-x-versions
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mrajattyagipvr-python-http-10-ma-w572v-11[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mrajattyagipvr-python-http-10-ma-w572v-11[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Resolved base name python:onbuild to python:onbuild 
+[36mINFO[0m[0000] Resolved base name python:onbuild to python:onbuild 
+[36mINFO[0m[0000] Downloading base image python:onbuild        
+2020/08/14 16:38:37 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0003] Error while retrieving image from cache: getting file info: stat /workspace/sha256:43780a8431c53f4afd734ad795e03127c0c607337a60639c5903a51a03535c22: no such file or directory 
+[36mINFO[0m[0003] Downloading base image python:onbuild        
+2020/08/14 16:38:40 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0005] Built cross stage deps: map[]                
+[36mINFO[0m[0005] Downloading base image python:onbuild        
+2020/08/14 16:38:42 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0007] Error while retrieving image from cache: getting file info: stat /workspace/sha256:43780a8431c53f4afd734ad795e03127c0c607337a60639c5903a51a03535c22: no such file or directory 
+[36mINFO[0m[0007] Downloading base image python:onbuild        
+2020/08/14 16:38:44 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0009] Executing 3 build triggers                   
+[36mINFO[0m[0009] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0009] Checking for cached layer 702769831180.dkr.ecr.ap-south-1.amazonaws.com/702769831180/cache:292c97c2018198a5cf62e84f320c2d7b304054e9db48a42dbb7062d77b6c716e... 
+[36mINFO[0m[0009] Cache entry expired: 702769831180.dkr.ecr.ap-south-1.amazonaws.com/702769831180/cache:292c97c2018198a5cf62e84f320c2d7b304054e9db48a42dbb7062d77b6c716e 
+[36mINFO[0m[0009] No cached layer found for cmd RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0009] Unpacking rootfs as cmd RUN pip install --no-cache-dir -r requirements.txt requires it. 
+[36mINFO[0m[0026] Taking snapshot of full filesystem...        
+[36mINFO[0m[0035] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0035] COPY requirements.txt /usr/src/app/          
+[36mINFO[0m[0035] Taking snapshot of files...                  
+[36mINFO[0m[0035] RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0035] cmd: /bin/sh                                 
+[36mINFO[0m[0035] args: [-c pip install --no-cache-dir -r requirements.txt] 
+You are using pip version 10.0.1, however version 20.2.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+[36mINFO[0m[0036] Taking snapshot of full filesystem...        
+[36mINFO[0m[0039] Using files from context: [/workspace/source] 
+[36mINFO[0m[0039] Pushing layer 702769831180.dkr.ecr.ap-south-1.amazonaws.com/702769831180/cache:292c97c2018198a5cf62e84f320c2d7b304054e9db48a42dbb7062d77b6c716e to cache now 
+[36mINFO[0m[0039] COPY . /usr/src/app                          
+[36mINFO[0m[0039] Taking snapshot of files...                  
+[36mINFO[0m[0039] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0039] COPY requirements.txt .                      
+[36mINFO[0m[0039] Taking snapshot of files...                  
+[36mINFO[0m[0039] ENV PORT 8080                                
+[36mINFO[0m[0039] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0039] EXPOSE 8080                                  
+[36mINFO[0m[0039] cmd: EXPOSE                                  
+[36mINFO[0m[0039] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0039] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0039] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0039] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0039] CMD ["app.py"]                               
+[36mINFO[0m[0039] No files changed in this command, skipping snapshotting. 
+2020/08/14 16:39:17 pushed blob: sha256:2cd0e956bf3b357bd519d254c3f3de27488dad39ef85af99b75e311945eb1785
+2020/08/14 16:39:17 pushed blob: sha256:58bf3c5294f30b872ec87cf4091b2e26e7221644c60e79b14cb0ba468e836b49
+2020/08/14 16:39:17 702769831180.dkr.ecr.ap-south-1.amazonaws.com/702769831180/cache:292c97c2018198a5cf62e84f320c2d7b304054e9db48a42dbb7062d77b6c716e: digest: sha256:c787ecb630bbf3d77be8570c1220a5b8c3499b5ebf144459b9743372c5d446fc size: 428
+2020/08/14 16:39:17 existing blob: sha256:f0db43b9b8da254cebc77bf871006df01219e195b9853616b9f708f124a00f3a
+2020/08/14 16:39:17 existing blob: sha256:2d21c767035c4593de8bf7ad9781aa83ba110871d1a50871192f4e3480e6f11d
+2020/08/14 16:39:17 existing blob: sha256:e96bc319bce0351d1157092352bc5f85f8800c745388e60e86d06dec99285b45
+2020/08/14 16:39:17 existing blob: sha256:490280dbcfb772eb5731f059e38fcfacaeb75b4d005af7c249fd51926db2bd62
+2020/08/14 16:39:17 existing blob: sha256:e2c0fb34dff3a1d32346b92e53fb88a14d1987b402a2348cb379c039687fabe2
+2020/08/14 16:39:17 existing blob: sha256:e10b68fb77e6e91453cd4c1b02e2d77aa23a857cd8eb250617129d074478e1a5
+2020/08/14 16:39:17 existing blob: sha256:06854774e2f35e4763103a446112c67322913a6177bea69eb49663e0166e6d6d
+2020/08/14 16:39:17 existing blob: sha256:ece825d3308bbf98f708d95475ccd880497a1e2979ff4ef2534d49049a18488f
+2020/08/14 16:39:17 existing blob: sha256:1c7fe136a31e13a1c879245672184ced3b9fc590989ba42a522a57b071a9c1aa
+2020/08/14 16:39:18 pushed blob: sha256:37a50f971dbe8ed7dfc95b845d1d0776d42e5b235a562257b3e517b70481f77b
+2020/08/14 16:39:18 pushed blob: sha256:8167fec5c2e0b06a128650f18ed9ee777f303f0d1c3ad5e133d5de2750ab5c61
+2020/08/14 16:39:18 pushed blob: sha256:3eb97ae693c1bc4db5c25c7fcf37f819f72fbb81703d0cee76e07b3cb0887b22
+2020/08/14 16:39:18 pushed blob: sha256:58bf3c5294f30b872ec87cf4091b2e26e7221644c60e79b14cb0ba468e836b49
+2020/08/14 16:39:19 pushed blob: sha256:3d7baa29ca299255b9023e8cac70a3cc2df8ee013c25ad70a8a70c352d0ab54e
+2020/08/14 16:39:19 702769831180.dkr.ecr.ap-south-1.amazonaws.com/702769831180/python-http-10:0.0.11: digest: sha256:a4385027a311bfbbead4f772b552ee909e57731e288eef118de1e11fe09ee90a size: 2385
+
+Showing logs for build [32mrajattyagipvr-python-http-10-ma-w572v-11[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/python-http-10 to an unshallow repository
+Generating change log from git ref 741454e1a6af0dc2308adac385006baa9b40b333 => 0502d28ffa1847380cee9e78f6637fd5cb35dff4
+WARNING: No release found for *************/python-http-10 and tag v0.0.11 so creating a new release
+Updated the release information at https://github.com/*************/python-http-10/releases/tag/v0.0.11
+generated: /workspace/source/charts/python-http-10/templates/release.yaml
+Created Release python-http-10-0-0-11 resource in namespace **
+Updating PipelineActivity *************-python-http-10-master-11 with version 0.0.11
+Updated PipelineActivities *************-python-http-10-master-11 with release notes URL: https://github.com/*************/python-http-10/releases/tag/v0.0.11
+
+Showing logs for build [32mrajattyagipvr-python-http-10-ma-w572v-11[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: bucketrepo http://bucketrepo/bucketrepo/charts/
+Successfully added Helm repository bucketrepo.
+Uploading chart file python-http-10-0.0.11.tgz to http://bucketrepo/bucketrepo/charts/api/charts
+Received 200 response: 
+
+Showing logs for build [32mrajattyagipvr-python-http-10-ma-w572v-11[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+Cloning the Jenkins X versions repo https://github.com/*************/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app python-http-10 version 0.0.11 to namespace **-staging
+WARNING: could not find upstream git URL failed to unmarshal  due to no GitConfDir defined
+pushed merged branch promote-python-http-10-0.0.11
+Created Pull Request: https://github.com/*************/environment-cluster12-staging/pull/67
+Added label updatebot to Pull Request https://github.com/*************/environment-cluster12-staging/pull/67
+got git provider status pending from PR https://github.com/*************/environment-cluster12-staging/pull/67
+got git provider status pending from PR https://github.com/*************/environment-cluster12-staging/pull/67
+got git provider status pending from PR https://github.com/*************/environment-cluster12-staging/pull/67
+got git provider status pending from PR https://github.com/*************/environment-cluster12-staging/pull/67
+Pull Request https://github.com/*************/environment-cluster12-staging/pull/67 is merged at sha 728db5ac7646aeffe39258dd15453f412f765aef
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names python-http-10, **-python-http-10, **-staging-python-http-10
