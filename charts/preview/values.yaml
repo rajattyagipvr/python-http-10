@@ -15,8 +15,8 @@
 #     helm.sh/hook: pre-delete
 #     helm.sh/hook-delete-policy: hook-succeeded
 
-# preview:
-#   image:
-#     repository:
-#     tag:
-#     pullPolicy: IfNotPresent
+preview:
+  image:
+    repository:
+    tag:
+    pullPolicy: IfNotPresent
