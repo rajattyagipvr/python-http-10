@@ -15,4 +15,6 @@ else
 	exit -1
 endif
 	echo "  version: $(PREVIEW_VERSION)" >> requirements.yaml
+	## rajat added helm delete as jx step helm uses a custom helm which is templating and causing issues in helm upgrade
+	helm delete preview -n jx-rajattyagipvr-$(APP_NAME)-pr-$(PULL_NUMBER)
 	jx step helm build
