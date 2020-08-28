@@ -15,6 +15,14 @@ else
 	exit -1
 endif
 	echo "  version: $(PREVIEW_VERSION)" >> requirements.yaml
-	## rajat added helm delete as jx step helm uses a custom helm which is templating and causing issues in helm upgrade
-	helm delete preview -n jx-rajattyagipvr-$(APP_NAME)-pr-$(PULL_NUMBER)
+
+## rajat added helm delete as jx step helm uses a custom helm which is templating and causing issues in helm upgrade
+HELM_RELEASE_NAME := $(shell helm list -n jx-rajattyagipvr-$(APP_NAME)-pr-$(PULL_NUMBER) -q)
+
+tester:
+ifndef HELM_RELEASE_NAME
+	@echo NO EXISTING RELEASE SO FRESH INSTALL
+else
+	@helm delete preview -n jx-rajattyagipvr-$(APP_NAME)-pr-$(PULL_NUMBER)
+endif
 	jx step helm build
