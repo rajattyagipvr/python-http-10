@@ -1,5 +1,8 @@
 OS := $(shell uname)
 
+## rajat added helm delete as jx step helm uses a custom helm which is templating and causing issues in helm   upgrade
+HELM_RELEASE_NAME := $(shell helm list -n jx-rajattyagipvr-$(APP_NAME)-pr-$(PULL_NUMBER) -q)
+
 preview:
 ifeq ($(OS),Darwin)
 	sed -i "" -e "s/version:.*/version: $(PREVIEW_VERSION)/" Chart.yaml
@@ -16,10 +19,7 @@ else
 endif
 	echo "  version: $(PREVIEW_VERSION)" >> requirements.yaml
 
-## rajat added helm delete as jx step helm uses a custom helm which is templating and causing issues in helm upgrade
-HELM_RELEASE_NAME := $(shell helm list -n jx-rajattyagipvr-$(APP_NAME)-pr-$(PULL_NUMBER) -q)
-
-tester:
+## added rajat
 ifndef HELM_RELEASE_NAME
 	@echo NO EXISTING RELEASE SO FRESH INSTALL
 else
